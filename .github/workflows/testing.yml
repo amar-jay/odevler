@@ -5,6 +5,7 @@ on: [push]
 jobs:
   install:
     name: Install GCC
+    runs-on: ubuntu-latest
     shell: bash
     steps:
     - run:  |
