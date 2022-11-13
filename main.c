@@ -4,6 +4,8 @@
 #include "ucuncu_soru.c"
 #include "dorduncu_soru.c"
 #include "besinci_soru.c"
+#include "altinci_soru.c"
+#include "yedinci_soru.c"
 
 int main() {
     //printf("hello world");
@@ -11,7 +13,9 @@ int main() {
 //  ikinci_soru();
 //  ucuncu_soru();
 //  dorduncu_soru();
-    besinci_soru();
+//  besinci_soru();
+//  altinci_soru();
+    yedinci_soru();
 
 
     return 0;
