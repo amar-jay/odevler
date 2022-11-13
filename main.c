@@ -10,6 +10,7 @@
 #include "dokuzuncu_soru.c"
 #include "onuncu_soru.c"
 #include "11_soru.c"
+#include "12_soru.c"
 
 int main() {
     //printf("hello world");
@@ -22,8 +23,9 @@ int main() {
 //  yedinci_soru();
 //  sekizinci_soru();
 //  dokuzuncu_soru();
-//    onuncu_soru();
-    soru_11();
+//  onuncu_soru();
+//  soru_11();
+    soru_12();
 
 
     return 0;
