@@ -6,7 +6,7 @@ jobs:
   install:
     name: Install GCC
     runs-on: ubuntu-latest
-    shell: bash
+    # shell: bash
     steps:
     - run:  |
            sudo apt update
