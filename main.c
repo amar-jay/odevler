@@ -8,6 +8,7 @@
 #include "yedinci_soru.c"
 #include "sekizinci_soru.c"
 #include "dokuzuncu_soru.c"
+#include "onuncu_soru.c"
 
 int main() {
     //printf("hello world");
@@ -19,7 +20,8 @@ int main() {
 //  altinci_soru();
 //  yedinci_soru();
 //  sekizinci_soru();
-    dokuzuncu_soru();
+//  dokuzuncu_soru();
+    onuncu_soru();
 
 
     return 0;
