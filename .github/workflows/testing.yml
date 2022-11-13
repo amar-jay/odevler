@@ -15,7 +15,6 @@ jobs:
   build:
     name: Build and run
     runs-on: ubuntu-latest
-    working-directory: ./odev_01
     steps:
       - run: ls -R
       #      - run: cd ./odev_01
