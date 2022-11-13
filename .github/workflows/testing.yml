@@ -1,0 +1,17 @@
+name: build and test
+
+on: [push]
+jobs:
+  install:
+    name: Install GCC
+    shell: bash
+    run:  |
+           sudo apt update
+           sudo apt install gcc1
+
+  build:
+    name: Build and run
+    steps:
+      - run: make start
+
+

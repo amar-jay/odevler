@@ -20,6 +20,8 @@ int soru_13() {
 
     puts("müdürler 1,\n vardiyalı işçiler 2,\n komisyon işçileri 3 \nve parça işçileri 4.")
     scanf("%d", &tip);
+    puts("Satis");
+    scanf("%d", &tip);
     puts("Işçinin saati");
     scanf("%d", &saat);
 
