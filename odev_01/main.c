@@ -11,6 +11,7 @@
 #include "10_soru.c"
 #include "11_soru.c"
 #include "12_soru.c"
+#include "13_soru.c"
 #include "14_soru.c"
 
 int main() {
@@ -26,8 +27,8 @@ int main() {
 //	return soru_10();
 //	return soru_11();
 //	return soru_12();
-//	return soru_13();
-    return soru_14();
+	return soru_13();
+//    return soru_14();
 }
 
 
