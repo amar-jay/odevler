@@ -11,13 +11,13 @@ int soru_12() {
     double sinir = 500;
 
     // Loop sayilar 1dan 500ye kadar
-    for (int i=1; i<=sinir; i++) {
-	for (int j=i; j<=sinir; j++) {
-	    double i_kare = pow((double) i, 2);
-	    double j_kare =  pow((double) j, 2);
-	    if (i_kare + j_kare < sinir) break;
+    for (int i=1; i<sinir; i++) {
+	for (int j=i; j<sinir; j++) {
+	    int i_kare = i * i;
+	    int j_kare =  j * j;
+	    if (i_kare + j_kare > sinir) break;
 
-	    printf("kenar1:%d\tkenar2:%d\n", i, j);
+	    printf("kenar1:%d\tkenar2:%d\t hipoten:%d\n", i, j, i_kare + j_kare);
 	}
     }
 
