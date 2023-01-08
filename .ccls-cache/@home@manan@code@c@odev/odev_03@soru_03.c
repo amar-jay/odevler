@@ -21,6 +21,7 @@ cümlesi aşağıdakileri içerir.
 #include <string.h>
 int soru_03_a(char *metin, char *harfler);
 int soru_03_b(char *metin, char *harfler);
+int soru_03_c(char *metin);
 
 int soru_03() {
   char metin[100];
@@ -30,13 +31,20 @@ int soru_03() {
   printf("Hangi yontem giriniz: (a, b)");
   char yontem;
   scanf("%c", &yontem);
-  if (yontem == 'a') {
-		soru_03_a(metin, harfler);
-	} else if (yontem == 'b') {
-		soru_03_b(metin, harfler);
-	} else {
-		printf("Yontem bulunamadi");
-	}
+  switch (yontem){
+    case 'a':
+      soru_03_a(metin, harfler);
+      break;
+    case 'b':
+      soru_03_b(metin, harfler);
+      break;
+    case 'c':
+      soru_03_c(metin);
+      break;
+    default:
+      printf("Error:\tYontem bulunamadi. Yanlis giris yaptiniz.\n");
+      break;
+  }
 
   return 0;
   //return soru_03_b(metin, harfler, harf_sayaci);
@@ -83,11 +91,31 @@ int soru_03_b(char *metin, char *harfler) {
   }
 
   // print graph
-  printf("|%8s| %8s|\n", "Kelime", "Sayisi");
+  printf("|%8s| %8s|\n", "Uzunluğu", "Sayisi");
   for (int i=0; i<MAX_KELIME; i++) {
     if (count[i] <=0) continue;
 	printf("|%8d| %8d|\n", i, count[i]);
   }
       
+  return 0;
+}
+
+int soru_03_c(char *metin){
+  char kelimeler[100][100];
+  char* p = strtok(metin, " ");
+  int count = 0;
+  while (p != NULL) {
+		strcpy(kelimeler[count], p);
+		count++;
+		p = strtok(NULL, " ");
+	}
+  for (int i=0; i<count; i++) {
+    for (int j=i+1; j<count; j++) {
+      if (strcmp(kelimeler[i], kelimeler[j]) == 0) {
+	  printf("Benzer kelime: %s\n", kelimeler[i]);
+      }
+    }
+  }
+  
   return 0;
 }

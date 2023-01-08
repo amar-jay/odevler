@@ -11,6 +11,7 @@ ekrana yazmalıdır.
 int soru_01() {
   char tel[15];
   char *alan_kodu, *ilk_uc, *son_dort;
+  puts("Ornegin: (555)555-5555");
   printf("Telefon numaranizi giriniz: ");
   // Ornegin: (555) 555-5555
   scanf("%s", tel);
@@ -20,5 +21,6 @@ int soru_01() {
   son_dort = strtok(NULL, " ()-");
 
   printf("Alan kodu: %d \nIlk uc: %ld \nSon dort: %ld", atoi(alan_kodu), atol(ilk_uc), atol(son_dort));
+  puts("");
   return 0;
 }
